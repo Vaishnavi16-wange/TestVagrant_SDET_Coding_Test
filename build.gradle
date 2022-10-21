@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.testng:testng:7.5'
+    testImplementation group: 'org.testng', name: 'testng', version: '7.5'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.1.2'
+    testImplementation 'org.slf4j:slf4j-simple:1.7.36'
+}
+
+test {
+    useTestNG()
+}
+
